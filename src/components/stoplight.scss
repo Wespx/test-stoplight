@@ -1,0 +1,57 @@
+.stoplight {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    margin: 0 auto;
+    width: 150px;
+    height: 500px;
+
+    background-color: #000;
+
+    &__light {
+        border-radius: 100%;
+        width: 95%;
+        height: 30%;
+
+        opacity: 0.2;
+
+        &_red {
+            background-color: #ff0000;
+        }
+
+        &_yellow {
+            background-color: #ffff00;
+        }
+        
+        &_green {
+            background-color: #008000;
+        }
+    }
+
+    &__timer {
+        position: absolute;
+        top: 190px;
+        left: 25px;
+        width: 100px;
+        font-size: 100px;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 0 10px #000, 0 0 0 10px #000;
+    }
+}
+
+.light-active {
+    opacity: 1;
+}
+
+.light-changing {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+      opacity: 0.2;
+    }
+}
